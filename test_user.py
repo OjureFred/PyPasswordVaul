@@ -55,6 +55,17 @@ class TestUser(unittest.TestCase):
 
         self.new_user.delete_user()
         self.assertEqual(len(User.user_list), 1)
+    
+    def test_find_by_name(self):
+        '''
+        test_find_user_by_name: Unit test to see if you can search for user by name and display details
+        '''
+        self.new_user.save_user()
+        test_user = User("testuser2", "testpassword2")
+        test_user.save_user()
+
+        found_user = User.find_by_name("testuser2")
+        self.assertEqual(found_user.password, test_user.password)
 
 
 if __name__ == '__main__':
