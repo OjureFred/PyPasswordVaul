@@ -78,6 +78,12 @@ class TestUser(unittest.TestCase):
         user_exists = User.user_exist("testuser1")
         self.assertTrue(user_exists)
 
+    def test_display_users(self):
+        '''
+        test_display_all_users: Unit test that tests for method that returns all users
+        '''
+        self.assertEqual(User.display_users(), User.user_list)
+
 
 if __name__ == '__main__':
     unittest.main()

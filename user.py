@@ -32,7 +32,7 @@ class User:
         delete_user method: deletes the last user saved to the user_list
         '''
         User.user_list.remove(self)
-    
+
     @classmethod
     def find_by_name(cls, name):
         '''
@@ -44,7 +44,6 @@ class User:
         for user in cls.user_list:
             if user.username == name:
                 return user
-
 
     @classmethod
     def user_exist(cls, name):
@@ -60,3 +59,10 @@ class User:
                 return True
 
         return False
+
+    @classmethod
+    def display_users(cls):
+        '''
+        display_users method: Method that returns the array user_list
+        '''
+        return cls.user_list
