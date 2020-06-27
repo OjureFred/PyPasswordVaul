@@ -20,9 +20,15 @@ class User:
         '''
         self.username = username
         self.password = password
-    
+
     def save_user(self):
         '''
         save_user method: saves user to user list as an append
         '''
         User.user_list.append(self)
+
+    def delete_user(self):
+        '''
+        delete_user method: deletes the last user saved to the user_list
+        '''
+        User.user_list.remove(self)
