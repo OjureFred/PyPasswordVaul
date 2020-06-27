@@ -46,3 +46,17 @@ class User:
                 return user
 
 
+    @classmethod
+    def user_exits(cls, name):
+        '''
+         Method that checks if a user exists from the user list.
+        Args:
+            name: Name to search if it exists
+        Returns :
+            Boolean: True or false depending if the contact exists
+        '''
+        for user in cls.user_list:
+            if user.username == name:
+                return True
+
+            return False
