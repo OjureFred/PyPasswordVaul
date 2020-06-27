@@ -22,15 +22,12 @@ class Credential:
 
     '''
 
-    credential_dict = {}  #empty credentials list
-    
-    def __init__(self, username){
+    credential_dict = {}  # empty credentials list
+
+    def __init__(self, username):
         self.username = username
         self.hotmail = ''
         self.twitter = ''
         self.facebook = ''
         self.instagram = ''
         self. google = ''
-    }
-
-    
