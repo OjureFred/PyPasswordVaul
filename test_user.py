@@ -35,7 +35,7 @@ class TestUser(unittest.TestCase):
         '''
         self.new_user.save_user()
         self.assertEqual(len(User.user_list), 1)
-    
+
     def test_save_multiple_user(self):
         ''' 
         test_save_multiple_user test case tests if we can save multiple user objects to our user_list
@@ -44,7 +44,7 @@ class TestUser(unittest.TestCase):
         test_user = User("testuser1", "testpassword1")
         test_user.save_user()
         self.assertEqual(len(User.user_list), 2)
-    
+
     def test_delete_user(self):
         '''
         test_delete_user test case tests if we can delete a user from the user_list array
@@ -55,7 +55,7 @@ class TestUser(unittest.TestCase):
 
         self.new_user.delete_user()
         self.assertEqual(len(User.user_list), 1)
-    
+
     def test_find_by_name(self):
         '''
         test_find_user_by_name: Unit test to see if you can search for user by name and display details

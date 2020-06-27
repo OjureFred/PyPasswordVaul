@@ -47,7 +47,7 @@ class User:
 
 
     @classmethod
-    def user_exits(cls, name):
+    def user_exist(cls, name):
         '''
          Method that checks if a user exists from the user list.
         Args:
@@ -59,4 +59,4 @@ class User:
             if user.username == name:
                 return True
 
-            return False
+        return False
