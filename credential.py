@@ -26,8 +26,4 @@ class Credential:
 
     def __init__(self, username):
         self.username = username
-        self.hotmail = ''
-        self.twitter = ''
-        self.facebook = ''
-        self.instagram = ''
-        self. google = ''
+        
