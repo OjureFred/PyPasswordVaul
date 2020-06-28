@@ -20,6 +20,9 @@ class TestUser(unittest.TestCase):
             "testuser", "testpassword")  # create new contact object
 
     def tearDown(self):
+        '''
+        tearDown: Method that runs after each test to clear the user list
+        '''
         User.user_list = []
 
     def test_init(self):
