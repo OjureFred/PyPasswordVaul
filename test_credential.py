@@ -17,7 +17,7 @@ class TestCredential(unittest.TestCase):
         setup method to run before each test runs
         '''
         self.new_credential = Credential("username")
-    
+
     def tearDown(self):
         '''
         tearDown: method that runs after each test to clear the dictionary
@@ -43,6 +43,26 @@ class TestCredential(unittest.TestCase):
         '''
         self.new_credential.add_site_credential("website", "sitepassword")
         self.assertEqual(len(Credential.credential_dict), 1)
+
+    def test_delete_credential(self):
+        '''
+        test_delete_credential: Unit test that deletes one complete credential from the dictionary
+        '''
+        self.new_credential.save_credential()
+        self.new_credential.add_site_credential("website", "sitepassword")
+
+        self.new_credential.delete_credential("website")
+        self.assertEqual(len(Credential.credential_dict), 1)
+
+    def test_find_credential(self):
+        '''
+        test_find_credential: Unit test that test if you can retrieve a credential given it's name
+        '''
+        self.new_credential.save_credential()
+        self.new_credential.add_site_credential("website", "sitepassword")
+
+        found_value = self.new_credential.find_credential("website")
+        self.assertTrue(found_value)
 
 
 if __name__ == '__main__':
