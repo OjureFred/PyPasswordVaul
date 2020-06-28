@@ -64,6 +64,12 @@ class TestCredential(unittest.TestCase):
         found_value = self.new_credential.find_credential("website")
         self.assertTrue(found_value)
 
+    def test_display_credentials(self):
+        '''
+        test_display_credentials: A unit test that tests if all credentials are returned
+        '''
+        self.assertEqual(Credential.display_credentials(), Credential.credential_dict)
+
 
 if __name__ == '__main__':
     unittest.main()

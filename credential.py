@@ -49,9 +49,17 @@ class Credential:
         '''
         Credential.credential_dict.pop(cred_name)
 
-    def find_credential(self, cred_name):
+    @classmethod
+    def find_credential(cls, cred_name):
         '''
         find_credential: Method that checks if a credential exists
         '''
-        if cred_name in self.credential_dict:
+        if cred_name in cls.credential_dict:
             return True
+
+    @classmethod
+    def display_credentials(cls):
+        '''
+        display_credentials: Class method that returns all credentials in the dictionary
+        '''
+        return cls.credential_dict
