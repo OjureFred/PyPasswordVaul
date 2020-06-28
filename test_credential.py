@@ -68,7 +68,8 @@ class TestCredential(unittest.TestCase):
         '''
         test_display_credentials: A unit test that tests if all credentials are returned
         '''
-        self.assertEqual(Credential.display_credentials(), Credential.credential_dict)
+        self.assertEqual(Credential.display_credentials(),
+                         Credential.credential_dict)
 
 
 if __name__ == '__main__':
