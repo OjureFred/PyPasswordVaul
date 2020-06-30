@@ -42,10 +42,27 @@ def main():
     print("\n")
     print("\n")
     print("Would you like to enter more website credentials?")
-    print(1: Yes 2: No)
+    print("1: Yes 2: No")
     sel_option = input()
 
     if sel_option == 1:
+        print("Enter website name:")
+
+        website = input()
+
+        print("Enter password:")
+
+        pwd = input()
+    
+    elif sel_option == 2:
+        print("Display credentials:Y/N")
+
+        sel_option2 = iput()
+
+        if sel_option2 == Y:
+
+        elif sel_option2 == N:
+            exit()
         
 
 
