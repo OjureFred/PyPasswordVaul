@@ -64,7 +64,7 @@ def main():
     elif sel_option == 2:
         print("Display credentials:Y/N")
 
-        sel_option2 = iput()
+        sel_option2 = input()
 
         if sel_option2 == "Y":
             list_credentials()
