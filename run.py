@@ -21,6 +21,13 @@ def create_credential(name):
     return new_credential
 
 
+
+def list_credentials():
+    for cred in cred_list:
+        print(cred.username + " " + cred.password)
+
+
+
 def main():
     '''
     Entry point to our application
@@ -59,9 +66,10 @@ def main():
 
         sel_option2 = iput()
 
-        if sel_option2 == Y:
+        if sel_option2 == "Y":
+            list_credentials()
 
-        elif sel_option2 == N:
+        elif sel_option2 == "N":
             exit()
         
 
