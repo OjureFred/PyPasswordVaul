@@ -38,10 +38,15 @@ def main():
     user_list.append(create_user(name, password))
     
     cred_list.append(create_credential(name))
-    
+
     print("\n")
     print("\n")
     print("Would you like to enter more website credentials?")
+    print(1: Yes 2: No)
+    sel_option = input()
+
+    if sel_option == 1:
+        
 
 
 
