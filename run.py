@@ -3,24 +3,23 @@
 from user import User
 from credential import Credential
 
-def create_user():
+user_list = []
+cred_list = []
+
+def create_user(name, password):
     '''
     Function to create users
     '''
     new_user = User(name, password)
     return new_user
 
-def create_credential():
+def create_credential(name):
     '''
     Function to create user's credential
     '''
     new_credential = Credential(name)
     return new_credential
 
-def save_user():
-    '''
-    Funtion to save user
-    '''
 
 def main():
     '''
@@ -28,4 +27,26 @@ def main():
     '''
     print("Hello: Welcome to our password Vault System")
     print("-------------------------------------")
-    print("Select: 1 to Login or 2: To create an account")
+    print("First create an account. Please enter your user name")
+
+    name = input()
+
+    print("\n")
+    print("Enter your password")
+    password = input()
+
+    user_list.append(create_user(name, password))
+    
+    cred_list.append(create_credential(name))
+    
+    print("\n")
+    print("\n")
+    print("Would you like to enter more website credentials?")
+
+
+
+if __name__ == '__main__':
+
+    main()
+
+
